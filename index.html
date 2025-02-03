@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Test ⌨️</h1>
+        <img src="typing1.jpeg" class="typing-img" alt="Typing Icon">
+
+        <label for="difficulty">Choose Difficulty:</label>
+        <select id="difficulty" onchange="loadSentence()">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <p id="sentence"></p>
+        <textarea id="user-input" placeholder="Start typing here..." oninput="startTyping()"></textarea>
+        
+        <p id="accuracy">Accuracy: 100%</p>
+        <p id="result"></p>
+
+        <button onclick="resetTest()">Try Again</button>
+
+        <div id="leaderboard-container">
+            <h2>Leaderboard 🏆</h2>
+            <img src="trophy.png" class="trophy-img" alt="Trophy">
+            <ul id="leaderboard"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
